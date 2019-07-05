@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
+import theme from "../templates/theme";
 
 const User = styled.p`
   font-style: italic;
   color: #bfbfbf;
-  padding: 0 10px;
+  padding: 0 ${theme.sizes.xs};
 `;
 
 const List = styled.div`

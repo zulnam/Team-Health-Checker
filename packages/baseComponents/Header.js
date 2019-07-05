@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import HeadIndex from "../head/HeadIndex";
+import theme from "../templates/theme";
 
 /* styling */
 
@@ -9,7 +10,7 @@ const Container = styled("div")`
   display: flex;
 
   @media (max-width: 480px) {
-    padding: 10px;
+    padding: ${theme.sizes.xs};
     flex-direction: column;
   }
 

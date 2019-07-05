@@ -3,12 +3,13 @@ import Header from "../packages/baseComponents/Header";
 import MainContainer from "../packages/baseComponents/MainContainer";
 import SessionController from "../packages/session/SessionController";
 import styled from "@emotion/styled";
+import theme from "../packages/templates/theme";
 
 const RoomTitleContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: ${theme.sizes.sm};
 `;
 
 const GeneratedSession = withRouter(props => (

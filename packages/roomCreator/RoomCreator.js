@@ -1,16 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import theme from "../templates/theme";
 
 const FormContainer = styled.form`
-  margin: 20px 0 0 40px;
+  margin: ${theme.sizes.sm} 0 0 ${theme.sizes.lg};
 `;
 
 const FormField = styled.article`
-  margin: 10px 0;
+  margin: ${theme.sizes.xs} 0;
 
   & select {
-    margin-left: 30px;
+    margin-left: ${theme.sizes.md};
     width: 151px;
 
     @media (min-width: 768px) {
@@ -24,8 +25,8 @@ const FormField = styled.article`
     font-size: 14px;
 
     @media (min-width: 768px) {
-      height: 30px;
-      font-size: 20px;
+      height: ${theme.sizes.md};
+      font-size: ${theme.sizes.sm};
     }
 `;
 

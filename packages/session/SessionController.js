@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import UserList from "./UserList";
 import CardResults from "./CardResults";
 import VotingButtons from "./VotingButtons";
+import theme from "../templates/theme";
 
 const ButtonContainer = styled.div`
   @media (max-width: 480px) {
@@ -14,18 +15,19 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   @media (max-width: 480px) {
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: ${theme.sizes.sm};
     width: 100%;
   }
 
-  height: 40px;
+  height: ${theme.sizes.lg};
   width: 200px;
-  margin-right: 20px;
+  margin-right: ${theme.sizes.sm};
   font-size: 17px;
   border-width: 3px;
   border-bottom-width: 4px;
 `;
 
+/* TODO: once we get exact images we will not need the position and right attributes */
 const ImageContainer = styled.img`
   width: 165%;
   position: relative;

@@ -1,24 +1,24 @@
 import React from "react";
 import styled from "@emotion/styled";
+import theme from "../templates/theme";
 
 const Container = styled.div`
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin: ${theme.sizes.sm} 0 ${theme.sizes.md} 0;
   display: flex;
   justify-content: space-around;
 
   @media (min-width: 768px) {
-    margin-top: 40px;
+    margin-top: ${theme.sizes.lg};
     justify-content: space-evenly;
   }
 `;
 
 const VottingButton = styled.div`
-  margin: 0 10px;
-  width: 50px;
-  height: 50px;
+  margin: 0 ${theme.sizes.xs};
+  width: ${theme.sizes.xl};
+  height: ${theme.sizes.xl};
 background-image: url('../../static/thumbs/${props => props.image}.png');
-  background-size: 50px;
+  background-size: ${theme.sizes.xl};
   background-repeat: no-repeat;
 
 
@@ -27,9 +27,7 @@ background-image: url('../../static/thumbs/${props => props.image}.png');
   }
 
   @media (min-width: 768px) {
-    margin: 0 20px;
-    /* width: 100px;
-    height: 100px; */
+    margin: 0 ${theme.sizes.sm};
   }
 `;
 

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import theme from "../templates/theme";
 
 const ResultsContainer = styled.div`
   display: flex;
@@ -7,21 +8,21 @@ const ResultsContainer = styled.div`
   @media (max-width: 480px) {
     flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: ${theme.sizes.sm};
   }
   flex-direction: column;
   justify-content: unset;
 `;
 
 const IndividualSection = styled.div`
-  margin: 10px 0;
+  margin: ${theme.sizes.xs} 0;
 `;
 
 const IndividualValue = styled.span`
   font-size: 32px;
   position: relative;
   top: 8px;
-  left: 10px;
+  left: ${theme.sizes.xs};
   float: left;
 
   @media (min-width: 768px) {
@@ -31,18 +32,18 @@ const IndividualValue = styled.span`
 `;
 
 const ResultIcons = styled.div`
-  margin: 10px 0;
-  width: 30px;
-  height: 30px;
+  margin: ${theme.sizes.xs} 0;
+  width: ${theme.sizes.md};
+  height: ${theme.sizes.md};
 background-image: url('../../static/thumbs/${props => props.image}.png');
-  background-size: 30px;
+  background-size: ${theme.sizes.md};
   background-repeat: no-repeat;
   float: left;
 
 
   media (min-width: 768px) {
-    width: 50px;
-    height: 50px;
+    width: ${theme.sizes.xl};
+    height: ${theme.sizes.xl};
   }
 `;
 

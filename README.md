@@ -10,7 +10,9 @@ _This tool is still in development and is not ready for usage at this point._
 ## Local instructions
 
 `yarn` - install all dependencies
+
 `next` - run the local environment
+
 `build` - rebuild nextjs (useful after major changes or after pulling)
 
 ## Development
