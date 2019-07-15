@@ -1,5 +1,6 @@
-import Header from "../packages/baseComponents/Header";
-import MainContainer from "../packages/baseComponents/MainContainer";
+import React from 'react';
+import Header from '../packages/baseComponents/Header';
+import MainContainer from '../packages/baseComponents/MainContainer';
 
 const About = () => (
   <MainContainer>

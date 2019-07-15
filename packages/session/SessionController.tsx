@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "@emotion/styled";
-import UserList from "./UserList";
-import CardResults from "./CardResults";
-import VotingButtons from "./VotingButtons";
-import theme from "../templates/theme";
+import React from 'react';
+import styled from '@emotion/styled';
+import UserList from './UserList';
+import CardResults from './CardResults';
+import VotingButtons from './VotingButtons';
+import theme from '../templates/theme';
 
 const ButtonContainer = styled.div`
   @media (max-width: 480px) {
@@ -54,29 +54,29 @@ export default class SessionController extends React.Component {
     questionIndex: 1
   };
 
-  browseCards = e => {
+  browseCards = (e: any) => {
     const direction = e.target.name;
     console.log(direction);
 
     switch (direction) {
-      case "previous":
+      case 'previous':
         if (this.state.questionIndex > 1) {
-          this.setState(prevState => {
+          this.setState((prevState: any) => {
             const newIndex = prevState.questionIndex - 1;
             return { questionIndex: newIndex };
           });
         } else {
-          alert("This is the first question!");
+          alert('This is the first question!');
         }
         break;
-      case "next":
+      case 'next':
         if (this.state.questionIndex <= 15) {
-          this.setState(prevState => {
+          this.setState((prevState: any) => {
             const newIndex = prevState.questionIndex + 1;
             return { questionIndex: newIndex, voting: true };
           });
         } else {
-          alert("This is the last question!");
+          alert('This is the last question!');
         }
     }
 
@@ -84,7 +84,7 @@ export default class SessionController extends React.Component {
   };
 
   lockUnlockVoting = () => {
-    this.setState(prevState => ({
+    this.setState((prevState: any) => ({
       voting: !prevState.voting
     }));
     console.log(this.state.voting);
@@ -111,7 +111,7 @@ export default class SessionController extends React.Component {
             Previous
           </Button>
           <Button onClick={this.lockUnlockVoting}>
-            {this.state.voting ? "Disable" : "Enable"} Voting
+            {this.state.voting ? 'Disable' : 'Enable'} Voting
           </Button>
           <Button name="next" onClick={this.browseCards}>
             Next

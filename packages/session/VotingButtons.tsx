@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import theme from "../templates/theme";
+import React from 'react';
+import styled from '@emotion/styled';
+import theme from '../templates/theme';
 
 const Container = styled.div`
   margin: ${theme.sizes.sm} 0 ${theme.sizes.md} 0;
@@ -13,11 +13,11 @@ const Container = styled.div`
   }
 `;
 
-const VottingButton = styled.div`
+const VottingButton: any = styled.div`
   margin: 0 ${theme.sizes.xs};
   width: ${theme.sizes.xl};
   height: ${theme.sizes.xl};
-background-image: url('../../static/thumbs/${props => props.image}.png');
+background-image: url('../../static/thumbs/${(props: any) => props.image}.png');
   background-size: ${theme.sizes.xl};
   background-repeat: no-repeat;
 

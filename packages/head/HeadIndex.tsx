@@ -1,4 +1,5 @@
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 
 function HeadIndex() {
   return (
@@ -11,7 +12,7 @@ function HeadIndex() {
       />
       <style jsx global>{`
         * {
-          font-family: "Ubuntu Mono", monospace;
+          font-family: 'Ubuntu Mono', monospace;
           background-color: black;
           color: white;
         }
