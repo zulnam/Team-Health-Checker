@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import styled from "@emotion/styled";
-import theme from "../templates/theme";
+import React from 'react';
+import Link from 'next/link';
+import styled from '@emotion/styled';
+import theme from '../templates/theme';
 
 const FormContainer = styled.form`
   margin: ${theme.sizes.sm} 0 0 ${theme.sizes.lg};
@@ -28,15 +28,16 @@ const FormField = styled.article`
       height: ${theme.sizes.md};
       font-size: ${theme.sizes.sm};
     }
+  }
 `;
 
 export default class RoomCreator extends React.Component {
   state = {
-    roomName: "",
-    teamName: ""
+    roomName: '',
+    teamName: ''
   };
 
-  handleChange = e => {
+  handleChange = (e: any) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -69,9 +70,7 @@ export default class RoomCreator extends React.Component {
           </FormField>
 
           <Link
-            href={`/room?roomName=${this.state.roomName}&teamName=${
-              this.state.teamName
-            }`}
+            href={`/room?roomName=${this.state.roomName}&teamName=${this.state.teamName}`}
           >
             <a>Create Room</a>
           </Link>

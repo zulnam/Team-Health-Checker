@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import theme from "../templates/theme";
+import React from 'react';
+import styled from '@emotion/styled';
+import theme from '../templates/theme';
 
 const ResultsContainer = styled.div`
   display: flex;
@@ -31,17 +31,17 @@ const IndividualValue = styled.span`
   }
 `;
 
-const ResultIcons = styled.div`
+const ResultIcons: any = styled.div`
   margin: ${theme.sizes.xs} 0;
   width: ${theme.sizes.md};
   height: ${theme.sizes.md};
-background-image: url('../../static/thumbs/${props => props.image}.png');
+  background-image: url('../../static/thumbs/${({ image }: any) => image}.png');
   background-size: ${theme.sizes.md};
   background-repeat: no-repeat;
   float: left;
 
 
-  media (min-width: 768px) {
+  @media (min-width: 768px) {
     width: ${theme.sizes.xl};
     height: ${theme.sizes.xl};
   }

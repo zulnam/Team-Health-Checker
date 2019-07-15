@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import theme from "../templates/theme";
+import React from 'react';
+import styled from '@emotion/styled';
+import theme from '../templates/theme';
 
 const User = styled.p`
   font-style: italic;

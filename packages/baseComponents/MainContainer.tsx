@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 const MainContainer = styled.div`
   @media (min-width: 768px) {

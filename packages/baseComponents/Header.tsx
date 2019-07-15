@@ -1,12 +1,12 @@
-import React from "react";
-import Link from "next/link";
-import styled from "@emotion/styled";
-import HeadIndex from "../head/HeadIndex";
-import theme from "../templates/theme";
+import React from 'react';
+import Link from 'next/link';
+import styled from '@emotion/styled';
+import HeadIndex from '../head/HeadIndex';
+import theme from '../templates/theme';
 
 /* styling */
 
-const Container = styled("div")`
+const Container = styled('div')`
   display: flex;
 
   @media (max-width: 480px) {
@@ -23,7 +23,7 @@ const Container = styled("div")`
   }
 `;
 
-const Title = styled("a")`
+const Title = styled('a')`
   font-size: 38px;
 
   @media (max-width: 480px) {
@@ -32,7 +32,7 @@ const Title = styled("a")`
   }
 `;
 
-const NavBar = styled("div")`
+const NavBar = styled('div')`
   ul {
     list-style: none;
     display: flex;
