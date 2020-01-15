@@ -17,4 +17,4 @@ _This tool is still in development and is not ready for usage at this point._
 
 ## Development
 
-Trello board: https://trello.com/b/4yHuAe93/team-health-check-stage-1
+Trello board: https://trello.com/b/pwz9bIsA/team-health-checker
