@@ -53,10 +53,13 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "axios": "^0.19.1",
     "babel-plugin-emotion": "^10.0.0",
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "mongodb": "^3.5.1",
+    "next": "^9.2.0",
+    "next-connect": "^0.6.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "serialize-javascript": ">=2.1.1"
   },
   "devDependencies": {
@@ -85,6 +88,6 @@
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.5"
   }
 }
