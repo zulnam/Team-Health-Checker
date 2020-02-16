@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
+import axios from 'axios';
 import styled from '@emotion/styled';
 import theme from '../templates/theme';
 
@@ -41,6 +42,16 @@ export default class RoomCreator extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  handleSubmit = (e: any) => {
+    e.preventDefault();
+    axios
+      .post('/api/roomSession', {
+        roomName: this.state.roomName,
+        teamName: this.state.teamName
+      })
+      .catch((error: any) => console.log('---- error! ----', error));
+  };
+
   render() {
     return (
       <div>
@@ -69,11 +80,12 @@ export default class RoomCreator extends React.Component {
             </select>
           </FormField>
 
-          <Link
+          {/* <Link
             href={`/room?roomName=${this.state.roomName}&teamName=${this.state.teamName}`}
           >
             <a>Create Room</a>
-          </Link>
+          </Link> */}
+          <button onClick={this.handleSubmit}>Create</button>
         </FormContainer>
       </div>
     );
