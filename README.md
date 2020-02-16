@@ -1,6 +1,6 @@
 # Team Health Checker
 
-### v. 0.10
+### v. 0.0.3
 
 ## About
 
