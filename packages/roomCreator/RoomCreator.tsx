@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import theme from '../templates/theme';
@@ -31,51 +31,47 @@ const FormField = styled.article`
   }
 `;
 
-export default class RoomCreator extends React.Component {
-  state = {
-    roomName: '',
-    teamName: ''
+const RoomCreator = () => {
+  const [roomName, setRoomName] = useState('');
+  const [teamName, setTeamName] = useState('');
+
+  const handleChange = (e: any) => {
+    if (e.target.name === 'roomName') {
+      setRoomName(e.target.value);
+    } else {
+      setTeamName(e.target.value);
+    }
   };
 
-  handleChange = (e: any) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  return (
+    <div>
+      <FormContainer>
+        <FormField>
+          <label htmlFor="roomName">Room Name: </label>
+          <input
+            type="text"
+            name="roomName"
+            value={roomName}
+            onChange={handleChange}
+            required
+          />
+        </FormField>
+        <FormField>
+          <label htmlFor="teamName">Tribe: </label>
+          <select name="teamName" value={teamName} onChange={handleChange}>
+            <option value="">Select a Team</option>
+            <option value="Browse">Browse</option>
+            <option value="Trade">Trade</option>
+            <option value="Buy">Buy</option>
+          </select>
+        </FormField>
 
-  render() {
-    return (
-      <div>
-        <FormContainer>
-          <FormField>
-            <label htmlFor="roomName">Room Name: </label>
-            <input
-              type="text"
-              name="roomName"
-              value={this.state.roomName}
-              onChange={this.handleChange}
-              required
-            />
-          </FormField>
-          <FormField>
-            <label htmlFor="teamName">Tribe: </label>
-            <select
-              name="teamName"
-              value={this.state.teamName}
-              onChange={this.handleChange}
-            >
-              <option value="">Select a Team</option>
-              <option value="Browse">Browse</option>
-              <option value="Trade">Trade</option>
-              <option value="Buy">Buy</option>
-            </select>
-          </FormField>
+        <Link href={`/room?roomName=${roomName}&teamName=${teamName}`}>
+          <a>Create Room</a>
+        </Link>
+      </FormContainer>
+    </div>
+  );
+};
 
-          <Link
-            href={`/room?roomName=${this.state.roomName}&teamName=${this.state.teamName}`}
-          >
-            <a>Create Room</a>
-          </Link>
-        </FormContainer>
-      </div>
-    );
-  }
-}
+export default RoomCreator;

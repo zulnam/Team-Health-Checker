@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import styled from '@emotion/styled';
 import UserList from './UserList';
 import CardResults from './CardResults';
@@ -48,76 +48,64 @@ const MainInfo = styled.div`
   }
 `;
 
-export default class SessionController extends React.Component {
-  state = {
-    voting: true,
-    questionIndex: 1
-  };
+const SessionController = () => {
+  const [votingOpen, setVotingOpen] = useState(true);
+  const [questionIndex, setQuestionIndex] = useState(1);
 
-  browseCards = (e: any) => {
+  const browseCards = (e: any) => {
     const direction = e.target.name;
     console.log(direction);
 
     switch (direction) {
       case 'previous':
-        if (this.state.questionIndex > 1) {
-          this.setState((prevState: any) => {
-            const newIndex = prevState.questionIndex - 1;
-            return { questionIndex: newIndex };
-          });
+        if (questionIndex > 1) {
+          setQuestionIndex(questionIndex - 1);
         } else {
           alert('This is the first question!');
         }
         break;
       case 'next':
-        if (this.state.questionIndex <= 15) {
-          this.setState((prevState: any) => {
-            const newIndex = prevState.questionIndex + 1;
-            return { questionIndex: newIndex, voting: true };
-          });
+        if (questionIndex < 15) {
+          setQuestionIndex(questionIndex + 1);
+          setVotingOpen(true);
         } else {
           alert('This is the last question!');
         }
     }
 
-    console.log(this.state.questionIndex);
+    console.log(questionIndex);
   };
 
-  lockUnlockVoting = () => {
-    this.setState((prevState: any) => ({
-      voting: !prevState.voting
-    }));
-    console.log(this.state.voting);
+  const lockUnlockVoting = () => {
+    setVotingOpen(!votingOpen);
   };
 
-  render() {
-    return (
-      <div>
-        <MainInfo>
-          <ImageContainer
-            src={`/static/cards/image_${this.state.questionIndex}.png`}
-          />
-          {this.state.voting ? (
-            <div>
-              <UserList />
-              <VotingButtons />
-            </div>
-          ) : (
-            <CardResults />
-          )}
-        </MainInfo>
-        <ButtonContainer>
-          <Button name="previous" onClick={this.browseCards}>
-            Previous
-          </Button>
-          <Button onClick={this.lockUnlockVoting}>
-            {this.state.voting ? 'Disable' : 'Enable'} Voting
-          </Button>
-          <Button name="next" onClick={this.browseCards}>
-            Next
-          </Button>
-        </ButtonContainer>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <MainInfo>
+        <ImageContainer src={`/cards/image_${questionIndex}.png`} />
+        {votingOpen ? (
+          <div>
+            <UserList />
+            <VotingButtons />
+          </div>
+        ) : (
+          <CardResults />
+        )}
+      </MainInfo>
+      <ButtonContainer>
+        <Button name="previous" onClick={browseCards}>
+          Previous
+        </Button>
+        <Button onClick={lockUnlockVoting}>
+          {votingOpen ? 'Disable' : 'Enable'} voting
+        </Button>
+        <Button name="next" onClick={browseCards}>
+          Next
+        </Button>
+      </ButtonContainer>
+    </div>
+  );
+};
+
+export default SessionController;
