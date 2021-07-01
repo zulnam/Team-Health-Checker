@@ -1,4 +1,3 @@
-import React from 'react';
 import { withRouter } from 'next/router';
 import Header from '../packages/baseComponents/Header';
 import MainContainer from '../packages/baseComponents/MainContainer';
