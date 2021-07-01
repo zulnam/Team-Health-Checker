@@ -17,7 +17,7 @@ const VottingButton: any = styled.div`
   margin: 0 ${theme.sizes.xs};
   width: ${theme.sizes.xl};
   height: ${theme.sizes.xl};
-background-image: url('../../static/thumbs/${(props: any) => props.image}.png');
+  background-image: url('/thumbs/${(props: any) => props.image}.png');
   background-size: ${theme.sizes.xl};
   background-repeat: no-repeat;
 

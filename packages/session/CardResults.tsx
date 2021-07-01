@@ -35,7 +35,7 @@ const ResultIcons: any = styled.div`
   margin: ${theme.sizes.xs} 0;
   width: ${theme.sizes.md};
   height: ${theme.sizes.md};
-  background-image: url('../../static/thumbs/${({ image }: any) => image}.png');
+  background-image: url('/thumbs/${({ image }: any) => image}.png');
   background-size: ${theme.sizes.md};
   background-repeat: no-repeat;
   float: left;
