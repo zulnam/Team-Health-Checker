@@ -21,6 +21,7 @@ _All features below are set to release prior to version 1._
 | DynamoDB Architecture | In Backlog |
 | Create Reports | In Backlog |
 | Compare Reports | In Backlog |
+| Documentation | In Backlog |
 
 
 ## Local instructions
