@@ -22,6 +22,7 @@ _All features below are set to release prior to version 1._
 | Create Reports | In Backlog |
 | Compare Reports | In Backlog |
 | Documentation | In Backlog |
+| Youtube Tutorial | In Backlog |
 
 
 ## Local instructions
