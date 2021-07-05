@@ -1,4 +1,3 @@
-import { render, debug, waitFor } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import HeadIndex from '../HeadIndex';
 
