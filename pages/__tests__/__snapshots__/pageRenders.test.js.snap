@@ -3,18 +3,18 @@
 exports[`All pages render correctly Renders about page 1`] = `
 <div>
   <div
-    class="css-1qwvdro-MainContainer e1d4bcbp0"
+    class="css-z0uj6b-MainContainer e1d4bcbp0"
   >
     <div
       class="css-jog5gk-Container e1gg83400"
     >
       <a
-        class="css-hfiite-Title e1gg83401"
+        class="css-16huv58-Title e1gg83401"
       >
         TEAM HEALTH CHECKER
       </a>
       <div
-        class="css-c8ss9n-NavBar e1gg83402"
+        class="css-1gv4faj-NavBar e1gg83402"
       >
         <ul>
           <li>
@@ -70,18 +70,18 @@ exports[`All pages render correctly Renders about page 1`] = `
 exports[`All pages render correctly Renders root page 1`] = `
 <div>
   <div
-    class="css-1qwvdro-MainContainer e1d4bcbp0"
+    class="css-z0uj6b-MainContainer e1d4bcbp0"
   >
     <div
       class="css-jog5gk-Container e1gg83400"
     >
       <a
-        class="css-hfiite-Title e1gg83401"
+        class="css-16huv58-Title e1gg83401"
       >
         TEAM HEALTH CHECKER
       </a>
       <div
-        class="css-c8ss9n-NavBar e1gg83402"
+        class="css-1gv4faj-NavBar e1gg83402"
       >
         <ul>
           <li>
@@ -115,18 +115,18 @@ exports[`All pages render correctly Renders root page 1`] = `
 exports[`All pages render correctly Renders the create room page 1`] = `
 <div>
   <div
-    class="css-1qwvdro-MainContainer e1d4bcbp0"
+    class="css-z0uj6b-MainContainer e1d4bcbp0"
   >
     <div
       class="css-jog5gk-Container e1gg83400"
     >
       <a
-        class="css-hfiite-Title e1gg83401"
+        class="css-16huv58-Title e1gg83401"
       >
         TEAM HEALTH CHECKER
       </a>
       <div
-        class="css-c8ss9n-NavBar e1gg83402"
+        class="css-1gv4faj-NavBar e1gg83402"
       >
         <ul>
           <li>
