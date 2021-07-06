@@ -27,12 +27,34 @@ _All features below are set to release prior to version 1._
 
 ## Local instructions
 
-`yarn` - install all dependencies
+`build` - rebuild nextjs for production
 
-`next` - run the local environment
+`dev` - run development environment locally
 
-`build` - rebuild nextjs (useful after major changes or after pulling)
+`start` - run production environment locally
+
+`lint` - check for any best practice issues using tslint rules
+
+`lint:clean` - check for best practice issues and attempt to fix them automatically
+
+`test` - run unit tests
+
+`test:coverage` - run unit tests with html report generation at the end
 
 ## Development
 
 Trello board: https://trello.com/b/pwz9bIsA/team-health-checker
+
+### Commit Methodology
+Currently there are no ticket numbers and no Pull Requests, since I am the only contributor to the project. All commits start with one of the following code words
+
+| Word | Description |
+| --- | --- |
+| build | change affecting the boilerplate, build or runtime of the project. |
+| docs | related to documentation in any shape or form |
+| documentation | deprecated. see 'docs' |
+| refactor | modifying existing code to make it cleaner or improve performance |
+| feature | implementation of new feature |
+| fix | bugfix |
+| style | any changes to styling |
+| tests | adding, changing or removing unit tests |
