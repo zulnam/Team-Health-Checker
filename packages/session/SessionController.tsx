@@ -83,7 +83,10 @@ const SessionController = () => {
   return (
     <div>
       <MainInfo>
-        <ImageContainer src={`/cards/image_${questionIndex}.png`} />
+        <ImageContainer
+          src={`/cards/image_${questionIndex}.png`}
+          data-testid="question-card"
+        />
         {votingOpen ? (
           <div>
             <UserList />
@@ -97,7 +100,7 @@ const SessionController = () => {
         <Button name="previous" onClick={browseCards}>
           Previous
         </Button>
-        <Button onClick={lockUnlockVoting}>
+        <Button data-testid="control-voting" onClick={lockUnlockVoting}>
           {votingOpen ? 'Disable' : 'Enable'} voting
         </Button>
         <Button name="next" onClick={browseCards}>
