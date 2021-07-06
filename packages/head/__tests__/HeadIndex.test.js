@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import HeadIndex from '../HeadIndex';
 
 describe('head metadata', () => {
-  it('loads all metadata on render', async () => {
+  it('loads all metadata on render', () => {
     const wrapper = shallow(<HeadIndex />);
 
     // title tag
