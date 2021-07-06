@@ -1,5 +1,4 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import { mount } from 'enzyme';
 import SessionController from '../SessionController';
 
 describe('SessionController functionality', () => {
