@@ -166,6 +166,7 @@ exports[`All pages render correctly Renders the create room page 1`] = `
             Room Name: 
           </label>
           <input
+            data-testid="roomName"
             name="roomName"
             required=""
             type="text"
@@ -181,6 +182,7 @@ exports[`All pages render correctly Renders the create room page 1`] = `
             Tribe: 
           </label>
           <select
+            data-testid="teamName"
             name="teamName"
           >
             <option

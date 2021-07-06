@@ -49,6 +49,7 @@ const RoomCreator = () => {
         <FormField>
           <label htmlFor="roomName">Room Name: </label>
           <input
+            data-testid="roomName"
             type="text"
             name="roomName"
             value={roomName}
@@ -58,7 +59,12 @@ const RoomCreator = () => {
         </FormField>
         <FormField>
           <label htmlFor="teamName">Tribe: </label>
-          <select name="teamName" value={teamName} onChange={handleChange}>
+          <select
+            data-testid="teamName"
+            name="teamName"
+            value={teamName}
+            onChange={handleChange}
+          >
             <option value="">Select a Team</option>
             <option value="Browse">Browse</option>
             <option value="Trade">Trade</option>
