@@ -1,6 +1,6 @@
-import css from '@emotion/css';
+import { css } from '@emotion/react';
 
-const globalStyles = () => css`
+const globalStyles = css`
   * {
     font-family: 'Ubuntu Mono', monospace;
     background-color: black;

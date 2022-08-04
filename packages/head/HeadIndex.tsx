@@ -2,7 +2,7 @@
 import React from 'react'; //fails when removed due to <> </>
 import Head from 'next/head';
 import globalStyles from './globalStyles';
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 
 function HeadIndex() {
   return (
