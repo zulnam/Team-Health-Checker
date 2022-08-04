@@ -27,7 +27,7 @@
     "@typescript-eslint",
     "prettier",
     "react-hooks",
-    "emotion"
+    "@emotion"
   ],
   "rules": {
     "no-plusplus": ["off"],
@@ -51,9 +51,6 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "prettier/prettier": "error",
-    "emotion/no-vanilla": "error",
-    "emotion/import-from-emotion": "error",
-    "emotion/styled-import": "error",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   },
